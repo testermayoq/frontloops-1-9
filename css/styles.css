@@ -43,3 +43,12 @@ body {
   line-height: 1.5;
   color: #222;
 }
+.container {
+  max-width: 800px;
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wallets-top-heading {
+  font-weight: 500;
+}
