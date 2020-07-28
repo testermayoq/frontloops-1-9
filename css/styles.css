@@ -44,7 +44,8 @@ body {
   background-color: gold;
   color: #222;
 }
-.container {
+.wrapper {
+  display: flex;
   max-width: 800px;
   margin-top: 80px;
   margin-left: auto;
@@ -131,4 +132,85 @@ body {
 .wallet-link:hover,
 .wallet-active .wallet-link {
   box-shadow: inset 0 0 0 2px darkslateblue;
+}
+.balance {
+  width: 500px;
+  height: 400px;
+  padding: 25px;
+  overflow: auto;
+}
+.balance-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.balance-top-heading {
+  margin: 0;
+  font-weight: 500;
+}
+.balance-value {
+  font-size: 24px;
+  font-weight: 600;
+}
+.balance-divider {
+  height: 1px;
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #aaa;
+}
+.transactions-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.transaction {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.transaction:last-child {
+  margin-bottom: 0;
+}
+.transaction::before {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.transaction-expense::before {
+  background-image: url("../img/minus.svg");
+}
+.transaction-income::before {
+  background-image: url("../img/plus.svg");
+}
+.transaction-info {
+  flex-grow: 1;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.transaction-name {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.transaction-details {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #999;
+}
+.transaction-value {
+  font-size: 20px;
+  font-weight: 500;
+}
+.transaction-expense .transaction-value {
+  color: tomato;
+}
+.transaction-income .transaction-value {
+  color: green;
 }
